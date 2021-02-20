@@ -9,4 +9,4 @@ I included multiple while loops to make sure users conformed to the requirements
 ### Important Link and Screenshots 
 
 * [deployed site](https://breyera.github.io/password-generator/)
-![screenshot of desktop view website](screenshot-of-completed-product.PNG)
+![screenshot of desktop view website](images/screenshot-of-completed-product.PNG)
