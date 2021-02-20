@@ -22,35 +22,50 @@ var x = 0;
 
 //create a function that prompts the user all the questions we need to ask
 function question() {
-  //if else statement, with >8 return back to beginning, if <128 return back
+  
   var length = prompt('How long do you want your password to be?') 
-
-  if (length < 8 || length > 128) {
-    alert('password must between 8 and 128 characters');
-    return;
-  } 
-
-  if (isNaN(length) === true) {
+  /* loop to prompt them to choose a number, and also a number between 8 and 128 characters */
+  while (isNaN(length)) { 
     alert('password length must be a number');
-    return;
-  }
+    length = prompt('How long do you want your password to be')
+   while (length < 8 || length > 128) {
+    alert('password must between 8 and 128 characters');
+    length = prompt('How long do you want your password to be?')
+  } }
+
 
   //prompt questions asking about each character type 
   var chooseLowercase = confirm('Would you like to include lowercase letters?');
   var chooseUppercase = confirm('Would you like to include uppercase letters?');
   var chooseNumbers = confirm('Would you like to include numbers?');
   var chooseCharacters = confirm('Would you like to include special characters?');
-  //if statement to see if they said yes(true) to at least one of the four questions - if no(false), alert must select at least one character type and return to beginning of questions
-  if(!chooseLowercase && !chooseUppercase && !chooseNumbers && !chooseCharacters) {
+  
+  while (!chooseLowercase && !chooseUppercase && !chooseNumbers && !chooseCharacters) {
     alert('You must choose at least one character type from the previous questions');
-  } else {
-    
-  }
+    /* re-asking in the loop what they would like to add so they are prompted again if they they did not choose a single character type */
+    chooseLowercase = confirm('Would you like to include lowercase letters?');
+    chooseUppercase = confirm('Would you like to include uppercase letters?');
+    chooseNumbers = confirm('Would you like to include numbers?');
+    chooseCharacters = confirm('Would you like to include special characters?');
+  } 
+  
+   
+    // start building password 
+    while (finalPassword.length<length) {
+      var randomCharacter 
+      // if they said yes to any of the choices above, randomly choose one of the arrays (from what they chose) (create an array from character type questions) and then randomly pick the index number to add to finalPassword
+
+      Math.floor(Math.random() * //randomlychosenarray.length)
+      
+      finalPassword = finalPassword + randomCharacter
+
+
+    }
 
   //create object to store all user input 
   //retun object that was created
 }
 
-//create function for getting a random element from one of arrays (use math.floor math.random)
+
 
 question()
