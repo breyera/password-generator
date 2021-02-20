@@ -54,7 +54,7 @@ function generatePassword() {
     while (finalPassword.length < length) {
       // get random character set
       randomCharacter = Math.floor(Math.random() * 4);
-      // if they said yes to any of the choices above, randomly choose one of the arrays (from what they chose) (create an array from character type questions) and then randomly pick the index number to add to finalPassword
+      /* if they said yes to any of the choices above, randomly choose one of the arrays (from what they chose) (create an array from character type questions) and then randomly pick the index number to add to finalPassword */
       // check random character to choices above
       if ( (randomCharacter === 0 && chooseLowercase) || (randomCharacter === 1 && chooseUppercase) || (randomCharacter === 2 && chooseNumbers) || (randomCharacter === 3 && chooseCharacters) ) {
 
@@ -63,13 +63,13 @@ function generatePassword() {
           case 0 :  // for lowercase
             finalArray = lowercase[Math.floor(Math.random() * lowercase.length)];
             break;
-            case 1 : // for uppercase
+          case 1 : // for uppercase
             finalArray = capitalLetters[Math.floor(Math.random() * capitalLetters.length)];
             break;
-            case 2 : // choose number
+          case 2 : // choose number
             ffinalArray = numbers[Math.floor(Math.random() * numbers.length)];
             break;
-            case 3 : // choose special character
+          case 3 : // choose special character
             finalArray = specialChar[Math.floor(Math.random() * specialChar.length)];
             break;
           }
